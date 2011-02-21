@@ -24,7 +24,6 @@ require "transitions/event"
 require "transitions/machine"
 require "transitions/state"
 require "transitions/state_transition"
-require "transitions/version"
 
 module Transitions
   class InvalidTransition < Exception

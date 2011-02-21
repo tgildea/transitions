@@ -1,9 +1,8 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path("../lib/transitions/version", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "transitions"
-  s.version     = Transitions::VERSION
+  s.version     = "0.0.10"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Jakub Kuźma"]
   s.email       = "qoobaa@gmail.com"
