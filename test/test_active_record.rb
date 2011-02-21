@@ -72,6 +72,7 @@ class TestActiveRecord < Test::Unit::TestCase
     @light.green_on
     assert @light.green?
     assert_equal :green, @light.current_state
+    assert_equal "green", @light.state
   end
 
   test "transition does not persist state" do
