@@ -60,6 +60,8 @@ module Transitions
 
         false
       end
+    rescue InvalidTransition
+      raise InvalidTransition.new("Invalid Transition: attempted event '#{event}' when in the '#{record.current_state(@name)}' state")
     end
 
     def states_for_select
@@ -94,4 +96,3 @@ module Transitions
     end
   end
 end
-
