@@ -56,6 +56,10 @@ module ActiveRecord
       raise
     end
 
+    def write_state_without_persistence(state_machine, state)
+      self.state = state.to_s
+    end
+
     def read_state(state_machine)
       self.state && self.state.to_sym
     end
@@ -71,4 +75,3 @@ module ActiveRecord
     end
   end
 end
-
