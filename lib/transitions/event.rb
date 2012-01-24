@@ -40,7 +40,7 @@ module Transitions
 
     def fire(obj, to_state = nil, *args)
       transitions = @transitions.select { |t| t.from == obj.current_state(@machine ? @machine.name : nil) }
-      raise InvalidTransition if transitions.size == 0
+      raise InvalidTransition.new("Can't call #{@name} on a #{obj.class} in the #{obj.current_state(@machine ? @machine.name : nil)} state") if transitions.size == 0
 
       next_state = nil
       transitions.each do |transition|
